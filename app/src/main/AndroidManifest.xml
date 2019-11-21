@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PageNotFoundActivity"></activity>
+        <activity android:name=".ResultDetail"></activity>
+        <activity android:name=".PageNotFoundActivity" />
         <activity android:name=".ArticleView" />
         <activity android:name=".ResultActivity" />
         <activity

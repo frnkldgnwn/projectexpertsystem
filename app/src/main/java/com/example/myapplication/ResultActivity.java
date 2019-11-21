@@ -14,6 +14,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.myapplication.POJO.Article;
+import com.example.myapplication.POJO.GetResult;
+import com.example.myapplication.POJO.Result;
 
 import java.util.ArrayList;
 
@@ -23,6 +25,7 @@ public class ResultActivity extends AppCompatActivity {
     private ImageView imageResult;
     private TextView result;
     private TextView seeDetails;
+    private Result resultDetails = new Result();
     private RecyclerView listItem;
     private ArrayList<Article> articles;
     private LinearLayoutManager layoutManager;
@@ -37,6 +40,17 @@ public class ResultActivity extends AppCompatActivity {
 
         initializeUI();
 
+        new GetResult(this, result, imageResult,
+                resultDetails,
+                intent.getStringExtra("pregnancies"),
+                intent.getStringExtra("glucose"),
+                intent.getStringExtra("blood_pressure"),
+                intent.getStringExtra("skin_thickness"),
+                intent.getStringExtra("insulin"),
+                intent.getStringExtra("bmi"),
+                intent.getStringExtra("age")
+        ).execute();
+
         buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,18 +58,19 @@ public class ResultActivity extends AppCompatActivity {
             }
         });
 
-        if (intent.getStringExtra("result").equals("NORMAL")) {
-            imageResult.setImageResource(R.drawable.ic_undraw_feeling_happy);
-        } else {
-            imageResult.setImageResource(R.drawable.ic_undraw_feeling_sad);
-        }
-
-        result.setText(intent.getStringExtra("result"));
-
         seeDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intentDetails = new Intent(ResultActivity.this, ResultDetail.class);
+                intentDetails.putExtra("pregnancies", resultDetails.getPregnancies());
+                intentDetails.putExtra("glucose", resultDetails.getGlucose());
+                intentDetails.putExtra("blood_pressure", resultDetails.getBloodPressure());
+                intentDetails.putExtra("skin_thickness", resultDetails.getSkinThickess());
+                intentDetails.putExtra("insulin", resultDetails.getInsulin());
+                intentDetails.putExtra("bmi", resultDetails.getBmi());
+                intentDetails.putExtra("age", resultDetails.getAge());
+                intentDetails.putExtra("result", resultDetails.getResult());
+                startActivity(intentDetails);
             }
         });
 
