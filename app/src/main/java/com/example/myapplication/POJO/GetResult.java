@@ -3,10 +3,15 @@ package com.example.myapplication.POJO;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.myapplication.HttpHandler;
 import com.example.myapplication.R;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.HashMap;
 
@@ -17,13 +22,13 @@ public class GetResult extends AsyncTask<Void, Void, Void> {
     private TextView result;
     private ImageView imageResult;
     private Result resultDetails;
-    private String pregnancies;
-    private String glucose;
-    private String bloodPressure;
-    private String skinThickess;
-    private String insulin;
-    private String bmi;
-    private String age;
+    private int pregnancies;
+    private int glucose;
+    private int bloodPressure;
+    private int skinThickess;
+    private int insulin;
+    private double bmi;
+    private int age;
     private HashMap<String, String> resultHash;
 
     public GetResult(Context context, TextView result, ImageView imageResult, Result resultDetails, String pregnancies, String glucose, String bloodPressure,
@@ -32,13 +37,13 @@ public class GetResult extends AsyncTask<Void, Void, Void> {
         this.result = result;
         this.imageResult = imageResult;
         this.resultDetails = resultDetails;
-        this.pregnancies = pregnancies;
-        this.glucose = glucose;
-        this.bloodPressure = bloodPressure;
-        this.skinThickess = skinThickess;
-        this.insulin = insulin;
-        this.bmi = bmi;
-        this.age = age;
+        this.pregnancies = Integer.parseInt(pregnancies);
+        this.glucose = Integer.parseInt(glucose);
+        this.bloodPressure = Integer.parseInt(bloodPressure);
+        this.skinThickess = Integer.parseInt(skinThickess);
+        this.insulin = Integer.parseInt(insulin);
+        this.bmi = Double.parseDouble(bmi);
+        this.age = Integer.parseInt(age);
     }
 
     @Override
@@ -52,10 +57,29 @@ public class GetResult extends AsyncTask<Void, Void, Void> {
 
     @Override
     protected Void doInBackground(Void... voids) {
-        // rest api here
-        resultHash = new HashMap<String, String>() {{
-            put("result", "NORMAL");
-        }};
+        String url = "https://testtakeone.herokuapp.com/api/?pregnancies=" + this.pregnancies +
+                "&glucose=" + this.glucose +
+                "&bloodpressure=" + this.bloodPressure +
+                "&skinthickness=" + this.skinThickess +
+                "&insulin=" + this.insulin + "&bmi= " + this.bmi + "&age=" + this.age;
+
+        HttpHandler httpHandler = new HttpHandler();
+        String jsonStr = httpHandler.makeServiceCall(url);
+
+        if (jsonStr != null) {
+            try {
+                final JSONObject result = new JSONObject(jsonStr).getJSONObject("result");
+
+                resultHash = new HashMap<String, String>() {{
+                    put("result", result.getString("result"));
+                }};
+            } catch (final JSONException e) {
+                Log.e("ResultActivity", "Json parsing error: " + e.getMessage());
+            }
+        } else {
+            Log.e("ResultActivity", "Couldn't get json from server.");
+        }
+
         return null;
     }
 

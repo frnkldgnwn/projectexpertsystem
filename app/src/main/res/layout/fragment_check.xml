@@ -38,21 +38,21 @@
                 android:orientation="vertical">
 
                 <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
                     android:layout_marginBottom="15dp"
-                    android:hint="Pregnancies Month">
+                    android:hint="How many times have you been pregnant?">
 
-                    <AutoCompleteTextView
+                    <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/pregnancies"
                         android:layout_width="match_parent"
                         android:layout_height="45dp"
                         android:backgroundTint="@color/colorPrimaryDark"
                         android:fontFamily="@font/geomanistmedium"
-                        android:inputType=""
+                        android:inputType="number"
                         android:paddingStart="15dp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -64,7 +64,7 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
                     android:layout_marginBottom="15dp"
-                    android:hint="Glucose Level">
+                    android:hint="Your glucose Level?">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/glucose_level"
@@ -84,7 +84,7 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
                     android:layout_marginBottom="15dp"
-                    android:hint="Blood Pressure">
+                    android:hint="Your blood pressure?">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/blood_pressure"
@@ -104,7 +104,7 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
                     android:layout_marginBottom="15dp"
-                    android:hint="Skin Thickness">
+                    android:hint="Your skin thickness?">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/skin_thickness"
@@ -124,7 +124,7 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
                     android:layout_marginBottom="15dp"
-                    android:hint="Insulin Level">
+                    android:hint="Your Insulin level?">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/insulin_level"
@@ -144,7 +144,7 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
                     android:layout_marginBottom="15dp"
-                    android:hint="Body Mass Index">
+                    android:hint="Your Body Mass Index?">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/body_mass_index"
@@ -152,7 +152,7 @@
                         android:layout_height="45dp"
                         android:backgroundTint="@color/colorPrimaryDark"
                         android:fontFamily="@font/geomanistmedium"
-                        android:inputType="number"
+                        android:inputType="numberDecimal"
                         android:paddingStart="15dp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -164,7 +164,7 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
                     android:layout_marginBottom="15dp"
-                    android:hint="Your Age">
+                    android:hint="Your current age?">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/age"

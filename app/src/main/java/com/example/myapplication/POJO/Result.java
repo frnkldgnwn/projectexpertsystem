@@ -2,19 +2,19 @@ package com.example.myapplication.POJO;
 
 public class Result {
 
-    private String pregnancies;
-    private String glucose;
-    private String bloodPressure;
-    private String skinThickess;
-    private String insulin;
-    private String bmi;
-    private String age;
+    private int pregnancies;
+    private int glucose;
+    private int bloodPressure;
+    private int skinThickess;
+    private int insulin;
+    private double bmi;
+    private int age;
     private String result;
 
     public Result() {}
 
-    public void setValue(String pregnancies, String glucose, String bloodPressure, String skinThickess,
-                  String insulin, String bmi, String age, String result) {
+    public void setValue(int pregnancies, int glucose, int bloodPressure, int skinThickess,
+                         int insulin, double bmi, int age, String result) {
         this.pregnancies = pregnancies;
         this.glucose = glucose;
         this.bloodPressure = bloodPressure;
@@ -25,31 +25,31 @@ public class Result {
         this.result = result;
     }
 
-    public String getPregnancies() {
+    public int getPregnancies() {
         return pregnancies;
     }
 
-    public String getGlucose() {
+    public int getGlucose() {
         return glucose;
     }
 
-    public String getBloodPressure() {
+    public int getBloodPressure() {
         return bloodPressure;
     }
 
-    public String getSkinThickess() {
+    public int getSkinThickess() {
         return skinThickess;
     }
 
-    public String getInsulin() {
+    public int getInsulin() {
         return insulin;
     }
 
-    public String getBmi() {
+    public double getBmi() {
         return bmi;
     }
 
-    public String getAge() {
+    public int getAge() {
         return age;
     }
 
