@@ -26,17 +26,18 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="YOUR REPORT"
                 android:layout_marginBottom="25dp"
-                android:textSize="40sp"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:text="YOUR REPORT"
+                android:textSize="35sp" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="40dp">
+                android:clipToPadding="false"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="30dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -48,7 +49,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
                         android:text="Pregnancies:"
-                        android:textSize="20sp" />
+                        android:textSize="17sp" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -61,7 +62,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
                         android:text="Glucose Level:"
-                        android:textSize="20sp" />
+                        android:textSize="17sp" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -74,7 +75,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
                         android:text="Blood Pressure:"
-                        android:textSize="20sp" />
+                        android:textSize="17sp" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -87,7 +88,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
                         android:text="Skin Thickness:"
-                        android:textSize="20sp" />
+                        android:textSize="17sp" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -100,7 +101,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
                         android:text="Insulin Level:"
-                        android:textSize="20sp" />
+                        android:textSize="17sp" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -113,7 +114,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
                         android:text="Body Mass Index:"
-                        android:textSize="20sp" />
+                        android:textSize="17sp" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -126,7 +127,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
                         android:text="Age:"
-                        android:textSize="20sp" />
+                        android:textSize="17sp" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -139,14 +140,14 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
                         android:text="Result:"
-                        android:textSize="20sp" />
+                        android:textSize="17sp" />
 
                     <TextView
                         android:id="@+id/result"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
-                        android:textSize="40sp" />
+                        android:textSize="35sp" />
 
                 </LinearLayout>
 
@@ -162,59 +163,59 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="21dp"
-                        android:textSize="20sp" />
+                        android:textSize="17sp" />
 
                     <TextView
                         android:id="@+id/res_glucose"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="21dp"
-                        android:textSize="20sp" />
+                        android:textSize="17sp" />
 
                     <TextView
                         android:id="@+id/res_blood_pressure"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="21dp"
-                        android:textSize="20sp" />
+                        android:textSize="17sp" />
 
                     <TextView
                         android:id="@+id/res_skin_thickness"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="21dp"
-                        android:textSize="20sp" />
+                        android:textSize="17sp" />
 
                     <TextView
                         android:id="@+id/res_insulin_level"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="21dp"
-                        android:textSize="20sp" />
+                        android:textSize="17sp" />
 
                     <TextView
                         android:id="@+id/res_bmi"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="21dp"
-                        android:textSize="20sp" />
+                        android:textSize="17sp" />
 
                     <TextView
                         android:id="@+id/res_age"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="21dp"
-                        android:textSize="20sp" />
+                        android:textSize="17sp" />
 
                 </LinearLayout>
 
                 <ImageView
                     android:id="@+id/res_img"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginEnd="-30dp" />
+                    android:layout_marginEnd="-20dp" />
 
             </RelativeLayout>
 

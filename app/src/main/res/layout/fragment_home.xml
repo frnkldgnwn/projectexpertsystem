@@ -22,7 +22,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_marginBottom="40dp"
                 android:contentDescription="image home"
-                android:src="@drawable/ic_undraw_joyride_hnno" />
+                android:src="@drawable/ic_undraw_doctor_kw5l" />
 
         </RelativeLayout>
 
