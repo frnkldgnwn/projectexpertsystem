@@ -68,10 +68,11 @@ public class GetResult extends AsyncTask<Void, Void, Void> {
 
         if (jsonStr != null) {
             try {
-                final JSONObject result = new JSONObject(jsonStr).getJSONObject("result");
+                Log.e("ResultActicity", jsonStr);
+                final JSONObject jsonResult = new JSONObject(jsonStr);
 
                 resultHash = new HashMap<String, String>() {{
-                    put("result", result.getString("result"));
+                    put("result", jsonResult.getString("result"));
                 }};
             } catch (final JSONException e) {
                 Log.e("ResultActivity", "Json parsing error: " + e.getMessage());

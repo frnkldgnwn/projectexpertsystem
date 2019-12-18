@@ -125,7 +125,6 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginBottom="10dp"
             android:text="See related article"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="18sp" />
@@ -134,12 +133,8 @@
             android:id="@+id/article_list_res"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="45dp"
-            android:paddingStart="5dp"
-            android:paddingEnd="5dp" />
+            android:clipToPadding="false"
+            android:padding="15dp" />
 
     </LinearLayout>
 

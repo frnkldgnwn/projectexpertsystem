@@ -29,7 +29,8 @@ public class CheckFragment extends Fragment {
     private TextInputEditText bloodPressure;
     private TextInputEditText skinThickness;
     private TextInputEditText insulin;
-    private TextInputEditText bmi;
+    private TextInputEditText weight;
+    private TextInputEditText height;
     private TextInputEditText age;
     private CardView checkButton;
 
@@ -51,7 +52,8 @@ public class CheckFragment extends Fragment {
         bloodPressure = root.findViewById(R.id.blood_pressure);
         skinThickness = root.findViewById(R.id.skin_thickness);
         insulin = root.findViewById(R.id.insulin_level);
-        bmi = root.findViewById(R.id.body_mass_index);
+        weight = root.findViewById(R.id.weight);
+        height = root.findViewById(R.id.height);
         age = root.findViewById(R.id.age);
 
         checkButton = root.findViewById(R.id.buttonCheck);
@@ -61,7 +63,8 @@ public class CheckFragment extends Fragment {
             add(bloodPressure);
             add(skinThickness);
             add(insulin);
-            add(bmi);
+            add(weight);
+            add(height);
             add(age);
         }};
     }
@@ -94,7 +97,7 @@ public class CheckFragment extends Fragment {
                     intent.putExtra("blood_pressure", bloodPressure.getText().toString());
                     intent.putExtra("skin_thickness", skinThickness.getText().toString());
                     intent.putExtra("insulin", insulin.getText().toString());
-                    intent.putExtra("bmi", bmi.getText().toString());
+                    intent.putExtra("bmi", Double.toString(countBMI()));
                     intent.putExtra("age", age.getText().toString());
                     startActivity(intent);
                     clearForm();
@@ -107,6 +110,13 @@ public class CheckFragment extends Fragment {
         for (TextInputEditText a : editTexts) {
             a.setText("");
         }
+    }
+
+    private double countBMI() {
+        double weight = Double.parseDouble(this.weight.getText().toString());
+        double height = Double.parseDouble(this.height.getText().toString());
+
+        return weight / Math.pow(height, 2);
     }
 
 }

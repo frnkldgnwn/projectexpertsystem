@@ -62,13 +62,13 @@ public class ResultActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intentDetails = new Intent(ResultActivity.this, ResultDetail.class);
-                intentDetails.putExtra("pregnancies", resultDetails.getPregnancies());
-                intentDetails.putExtra("glucose", resultDetails.getGlucose());
-                intentDetails.putExtra("blood_pressure", resultDetails.getBloodPressure());
-                intentDetails.putExtra("skin_thickness", resultDetails.getSkinThickess());
-                intentDetails.putExtra("insulin", resultDetails.getInsulin());
-                intentDetails.putExtra("bmi", resultDetails.getBmi());
-                intentDetails.putExtra("age", resultDetails.getAge());
+                intentDetails.putExtra("pregnancies", Integer.toString(resultDetails.getPregnancies()));
+                intentDetails.putExtra("glucose", Integer.toString(resultDetails.getGlucose()));
+                intentDetails.putExtra("blood_pressure", Integer.toString(resultDetails.getBloodPressure()));
+                intentDetails.putExtra("skin_thickness", Integer.toString(resultDetails.getSkinThickess()));
+                intentDetails.putExtra("insulin", Integer.toString(resultDetails.getInsulin()));
+                intentDetails.putExtra("bmi", String.format("%.2f", resultDetails.getBmi()));
+                intentDetails.putExtra("age", Integer.toString(resultDetails.getAge()));
                 intentDetails.putExtra("result", resultDetails.getResult());
                 startActivity(intentDetails);
             }

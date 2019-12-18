@@ -34,7 +34,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -49,11 +49,12 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/pregnancies"
                         android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:layout_height="50dp"
                         android:backgroundTint="@color/colorPrimaryDark"
                         android:fontFamily="@font/geomanistmedium"
                         android:inputType="number"
-                        android:paddingStart="15dp" />
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -69,11 +70,12 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/glucose_level"
                         android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:layout_height="50dp"
                         android:backgroundTint="@color/colorPrimaryDark"
                         android:fontFamily="@font/geomanistmedium"
                         android:inputType="number"
-                        android:paddingStart="15dp" />
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -89,11 +91,12 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/blood_pressure"
                         android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:layout_height="50dp"
                         android:backgroundTint="@color/colorPrimaryDark"
                         android:fontFamily="@font/geomanistmedium"
                         android:inputType="number"
-                        android:paddingStart="15dp" />
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -104,16 +107,17 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
                     android:layout_marginBottom="15dp"
-                    android:hint="Your skin thickness?">
+                    android:hint="Your skin thickness? (mm)">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/skin_thickness"
                         android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:layout_height="50dp"
                         android:backgroundTint="@color/colorPrimaryDark"
                         android:fontFamily="@font/geomanistmedium"
                         android:inputType="number"
-                        android:paddingStart="15dp" />
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -129,11 +133,12 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/insulin_level"
                         android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:layout_height="50dp"
                         android:backgroundTint="@color/colorPrimaryDark"
                         android:fontFamily="@font/geomanistmedium"
                         android:inputType="number"
-                        android:paddingStart="15dp" />
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -144,16 +149,38 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
                     android:layout_marginBottom="15dp"
-                    android:hint="Your Body Mass Index?">
+                    android:hint="Your Weight? (kg)">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/body_mass_index"
+                        android:id="@+id/weight"
                         android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:layout_height="50dp"
                         android:backgroundTint="@color/colorPrimaryDark"
                         android:fontFamily="@font/geomanistmedium"
                         android:inputType="numberDecimal"
-                        android:paddingStart="15dp" />
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:hint="Your Height? (m)">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/height"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:backgroundTint="@color/colorPrimaryDark"
+                        android:fontFamily="@font/geomanistmedium"
+                        android:inputType="numberDecimal"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -169,11 +196,12 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/age"
                         android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:layout_height="50dp"
                         android:backgroundTint="@color/colorPrimaryDark"
                         android:fontFamily="@font/geomanistmedium"
                         android:inputType="number"
-                        android:paddingStart="15dp" />
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -181,9 +209,10 @@
                     android:id="@+id/buttonCheck"
                     android:layout_width="150dp"
                     android:layout_height="45dp"
-                    android:layout_gravity="right"
+                    android:layout_gravity="end"
                     android:layout_marginTop="30dp"
                     android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="15dp"
                     android:backgroundTint="@color/colorPrimaryDark"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="0dp">
